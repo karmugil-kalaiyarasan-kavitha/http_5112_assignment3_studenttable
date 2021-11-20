@@ -1,0 +1,32 @@
+﻿@using http_5112_assignment3_student.Models;
+@model IEnumerable<http_5112_assignment3_student.Models.Student>
+
+@{
+    ViewBag.Title = "ShowStudent";
+}
+
+<h2>Student List</h2>
+
+
+@foreach (var Student in Model)
+{
+    <div>
+        <table>
+            <tr>
+                <th>Student ID</th>
+                <th>Student First Name</th>
+                <th>Student Last Name</th>
+                <th>Student Number</th>
+                <th>Enrol Date</th>
+            </tr>
+            <tr>
+                <td>@Student.studentId</td>
+                <td>@Student.studentFName</td>
+                <td>@Student.studentLName</td>
+                <td>@Student.studentNumber</td>
+                <td>@Student.enrolDate</td>
+            </tr>
+        </table>
+
+    </div>
+}
